@@ -1,0 +1,41 @@
+# Compiler outputs (Delphi & FPC / Lazarus)
+*.dcu
+*.ppu
+*.o
+*.a
+*.rsj
+*.compiled
+*.exe
+*.dll
+*.so
+*.dylib
+*.bpl
+*.dcp
+*.map
+*.dbg
+*.res
+
+# IDE local state & backups
+*.local
+*.identcache
+*.stat
+*.tvsconfig
+*.dsk
+*.dof
+*.cfg
+*.bak
+*~
+__history/
+__recovery/
+backup/
+
+# Build & output directories
+bin/
+build/
+lib/
+out/
+modules/
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db

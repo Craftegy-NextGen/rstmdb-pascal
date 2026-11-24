@@ -1,0 +1,8 @@
+{
+  "name": "rstmdb-pascal",
+  "description": "Unified Delphi (11+) and Free Pascal (FPC) client SDK for rstmdb (RCP v1)",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Craftegy-NextGen/rstmdb-pascal",
+  "mainsrc": "./src",
+  "dependencies": {}
+}

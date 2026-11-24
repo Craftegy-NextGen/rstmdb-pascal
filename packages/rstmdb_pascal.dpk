@@ -1,0 +1,44 @@
+package rstmdb_pascal;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'rstmdb-pascal RCP v1 Client SDK'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl;
+
+contains
+  Rstmdb.Types in '..\src\Rstmdb.Types.pas',
+  Rstmdb.Errors in '..\src\Rstmdb.Errors.pas',
+  Rstmdb.Protocol in '..\src\Rstmdb.Protocol.pas',
+  Rstmdb.Json in '..\src\Rstmdb.Json.pas',
+  Rstmdb.Transport in '..\src\Rstmdb.Transport.pas',
+  Rstmdb.Connection in '..\src\Rstmdb.Connection.pas',
+  Rstmdb.Client in '..\src\Rstmdb.Client.pas';
+
+end.

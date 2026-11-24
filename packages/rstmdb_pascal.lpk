@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="rstmdb_pascal"/>
+    <Type Value="RunTimeOnly"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="../src"/>
+        <OtherUnitFiles Value="../src"/>
+        <UnitOutputDirectory Value="../lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+        </SyntaxOptions>
+      </Parsing>
+      <CodeGeneration>
+        <Optimizations>
+          <OptimizationLevel Value="2"/>
+        </Optimizations>
+      </CodeGeneration>
+    </CompilerOptions>
+    <Description Value="Unified Object Pascal client SDK for rstmdb (RCP v1)"/>
+    <License Value="MIT"/>
+    <Version Minor="1"/>
+    <Files Count="8">
+      <Item1>
+        <Filename Value="../src/rstmdb.inc"/>
+        <Type Value="Include"/>
+      </Item1>
+      <Item2>
+        <Filename Value="../src/Rstmdb.Types.pas"/>
+        <UnitName Value="Rstmdb.Types"/>
+      </Item2>
+      <Item3>
+        <Filename Value="../src/Rstmdb.Errors.pas"/>
+        <UnitName Value="Rstmdb.Errors"/>
+      </Item3>
+      <Item4>
+        <Filename Value="../src/Rstmdb.Protocol.pas"/>
+        <UnitName Value="Rstmdb.Protocol"/>
+      </Item4>
+      <Item5>
+        <Filename Value="../src/Rstmdb.Json.pas"/>
+        <UnitName Value="Rstmdb.Json"/>
+      </Item5>
+      <Item6>
+        <Filename Value="../src/Rstmdb.Transport.pas"/>
+        <UnitName Value="Rstmdb.Transport"/>
+      </Item6>
+      <Item7>
+        <Filename Value="../src/Rstmdb.Connection.pas"/>
+        <UnitName Value="Rstmdb.Connection"/>
+      </Item7>
+      <Item8>
+        <Filename Value="../src/Rstmdb.Client.pas"/>
+        <UnitName Value="Rstmdb.Client"/>
+      </Item8>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+    </RequiredPkgs>
+  </Package>
+</CONFIG>

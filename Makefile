@@ -1,19 +1,31 @@
 FPC       ?= fpc
-FPCFLAGS  ?= -Mdelphi -Sh -O2 -vewn -Fi./src -Fu./src -FUlib -FEbin
+FPCFLAGS  ?= -Mdelphi -Sh -O2 -vewn -Fi./src -Fu./src -Fu./tests -FUlib -FEbin
 FPC_TEST_FLAGS := $(FPCFLAGS) -gh -gl
 
-.PHONY: all build test clean
+.PHONY: all build test examples live-test clean
 
 all: build
 
 build:
 	@mkdir -p lib bin
-	@echo "Add unit build targets once SDK units are implemented under src/."
+	$(FPC) $(FPCFLAGS) tests/RunTests.dpr
 
 test:
 	@mkdir -p lib bin
-	@echo "Add test runner execution ($(FPC) $(FPC_TEST_FLAGS)) once tests/ runner exists."
+	$(FPC) $(FPC_TEST_FLAGS) tests/RunTests.dpr
+	./bin/RunTests
+
+examples:
+	@mkdir -p lib bin
+	$(FPC) $(FPCFLAGS) examples/BasicUsage.dpr
+	$(FPC) $(FPCFLAGS) examples/WatchEvents.dpr
+
+live-test:
+	@mkdir -p lib bin
+	$(FPC) $(FPC_TEST_FLAGS) tests/RunLiveIntegration.dpr
+	./bin/RunLiveIntegration
 
 clean:
-	rm -rf lib/* bin/*
+	@mkdir -p lib bin
+	find lib bin -mindepth 1 -delete
 	find . -type f \( -name '*.ppu' -o -name '*.o' -o -name '*.dcu' \) -delete
